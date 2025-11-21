@@ -1,0 +1,40 @@
+# Nginx configuration for Vite React app
+# Place this inside your server block
+
+server {
+    listen 80;
+    server_name your-domain.com;
+    
+    root /path/to/your/dist;
+    index index.html;
+
+    # Correct MIME types
+    types {
+        application/javascript js mjs;
+        text/css css;
+        text/html html;
+        image/svg+xml svg svgz;
+        image/x-icon ico;
+        image/webp webp;
+        font/woff woff;
+        font/woff2 woff2;
+        font/ttf ttf;
+        font/otf otf;
+    }
+
+    # Gzip compression
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+    # SPA routing - serve index.html for all routes
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Cache static assets
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|otf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+}
+

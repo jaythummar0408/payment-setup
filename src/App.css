@@ -84,6 +84,27 @@
   color: #646cff;
 }
 
+.merchant-info .payment-method {
+  font-size: 1.1rem;
+  color: #00BAF2;
+  background: linear-gradient(135deg, #00BAF2 0%, #002E6E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+.merchant-info .upi-info {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 400;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-family: monospace;
+}
+
 .merchant-info ul {
   list-style: none;
   padding: 0;

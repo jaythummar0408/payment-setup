@@ -10,9 +10,9 @@ function App() {
   const [error, setError] = useState<string>('')
 
   const merchants: Merchants = {
-    "M001": "paytmmp://pay?pa=mab.037322031160171@axisbank&pn=Shop+One&am=1&cu=INR",
-    "M002": "paytmmp://pay?pa=mab.037322031160171@axisbank&pn=Shop+Two&am=2&cu=INR",
-    "M003": "paytmmp://pay?pa=mab.037322031160171@axisbank&pn=Shop+Three&am=3&cu=INR"
+    "M001": "paytmmp://pay?pa=jppatel10125-2@okicici&pn=Shop+One&am=1&cu=INR",
+    "M002": "paytmmp://pay?pa=jppatel10125-2@okicici&pn=Shop+Two&am=2&cu=INR",
+    "M003": "paytmmp://pay?pa=jppatel10125-2@okicici&pn=Shop+Three&am=3&cu=INR"
   }
 
   const handlePay = () => {
